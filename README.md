@@ -4,6 +4,7 @@ Tutorial ETH Storage BLOB Storage Race (Use VPS Ubuntu 22)  😎😊
 
 1️⃣ Install Docker
 
+````
 sudo apt-get update && \
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
@@ -11,14 +12,17 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docke
 sudo apt-get update && \
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
+```
+
 2️⃣ OPEN PORT
 
+````
 sudo ufw allow 22
 sudo ufw allow 9545
 sudo ufw allow 9222
 sudo ufw allow 30305/udp
 sudo ufw enable
-
+```
 3️⃣ SIAPIN BAHAN BAHAN DI BAWAH
 
 <miner> = Isi Address 0x Kita
