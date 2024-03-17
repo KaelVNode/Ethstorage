@@ -3,22 +3,22 @@
 Tutorial ETH Storage BLOB Storage Race (Use VPS Ubuntu 22)  😎😊
 
 1️⃣ Install Docker
-
+```
 sudo apt-get update && \
 sudo apt-get install -y apt-transport-https ca-certificates curl software-properties-common gnupg && \
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg && \
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null && \
 sudo apt-get update && \
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io
-
+```
 2️⃣ OPEN PORT
-
+````
 sudo ufw allow 22
 sudo ufw allow 9545
 sudo ufw allow 9222
 sudo ufw allow 30305/udp
 sudo ufw enable
-
+````
 3️⃣ SIAPIN BAHAN BAHAN DI BAWAH
 
 <miner> = Isi Address 0x Kita
@@ -27,26 +27,41 @@ sudo ufw enable
 ➡️ Create Api Untuk Ganti <el_rpc>
 
 ➖ Create Account and Login : https://dashboard.blockpi.io/workbench/dashboard
+
 ➖ Get Started > Free Package Gift
+
 ➖ Klik Generate API Key
+
 ➖ Pilih Ethereum Sepolia
+
 ➖ Copy Link Http
+
 ➖ Taruh di <el_rpc> (Tanpa <>)
 
 ➡️ Create Endpoints Untuk Ganti  <cl_rpc>
 
 ➖ Create Endpoint : https://dashboard.quicknode.com/endpoints/new
+
 ➖ Pilih Ethereum Sepolia
+
 ➖ Pilih Compile Safety
+
 ➖ Pilih Endpoints Armor
+
 ➖ Select Plan $0 > Individual
+
 ➖ Isi Data
+
 ➖ Payment Menthod (Isi Kredit Card Bank Jago)
+
 ➖ Create Endpoints
+
 ➖ Copy Link Http Provider
+
 ➖ Taruh di <cl_rpc> (Tanpa <>)
 
 4️⃣Run Docker Edit Semua Data Yang di Minta, Jalankan di Vps  :
+```
 
 docker run --name es  -d  \
           -v ./es-data:/es-node/es-data \
@@ -59,10 +74,11 @@ docker run --name es  -d  \
           ghcr.io/ethstorage/es-node:v0.1.9 \
           --l1.rpc <el_rpc> \
           --l1.beacon <cl_rpc>
-
-5️⃣ CHECK LOG 
-
-docker logs -f es 
+```
+5️⃣ CHECK LOG
+```
+docker logs -f es
+```
 
 😂 PERHATIKAN OUPUT YANG KELUAR (BIARKAN SAJA JALAN SAMPAI 3 TAHAP / COMMAND DI BAWAH GAK PERLU DI PASTE DI TERMINAL VPS0
 
