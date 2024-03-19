@@ -1,5 +1,19 @@
 ##  Tutorial ETH Storage BLOB Storage Race (Use VPS Ubuntu 22)
 
+## Hardware Requirements
+
+|  Components |  Requirements |
+| ------------ | ------------ |
+| CPU  | A minimum of 4 cores and 8 threads  |
+| RAM | 8GB of RAM  |
+| Storage  | 550 GB NVMe  |
+
+## Software Requirements
+
+| Components | Persyaratan Minimum |
+| ------------ | ------------ |
+| OS |  Ubuntu 20.04 atau Higher | 
+
 # Install Docker
 ```
 sudo apt-get update && \
